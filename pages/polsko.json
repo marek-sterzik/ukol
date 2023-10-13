@@ -1,0 +1,41 @@
+{
+    "template": "state.html.twig",
+    "vars": {
+        "name": "Polsko",
+        "area": 312679,
+        "citizens": 38179800,
+        "neighbors": [
+            {
+                "name": "Rusko",
+                "link": null
+            },
+            {
+                "name": "Litva",
+                "link": null
+            },
+            {
+                "name": "Bělorusko",
+                "link": null
+            },
+            {
+                "name": "Ukrajina",
+                "link": null
+            },
+            {
+                "name": "Slovensko",
+                "link": "/slovensko"
+            },
+            {
+                "name": "Česká republika",
+                "link": "/ceska_republika"
+            },
+            {
+                "name": "Německo",
+                "link": "/nemecko"
+            }
+        ],
+        "mainCity": "Varšava",
+        "image": "images/states/polsko.svg"
+    }
+}
+

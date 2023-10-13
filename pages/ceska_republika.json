@@ -1,0 +1,28 @@
+{
+    "template": "state.html.twig",
+    "vars": {
+        "name": "Česká republika",
+        "area": 78870,
+        "citizens": 10873553,
+        "neighbors": [
+            {
+                "name": "Německo",
+                "link": "/nemecko"
+            },
+            {
+                "name": "Polsko",
+                "link": "/polsko"
+            },
+            {
+                "name": "Slovensko",
+                "link": null
+            },
+            {
+                "name": "Rakousko",
+                "link": null
+            }
+        ],
+        "mainCity": "Praha",
+        "image": "images/states/ceska_republika.svg"
+    }
+}
