@@ -43,6 +43,7 @@
             }
         ],
         "mainCity": "Berlín",
+        "capital": "Berlín",
         "image": "images/states/nemecko.svg"
     }
 }

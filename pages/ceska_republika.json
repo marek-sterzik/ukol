@@ -23,6 +23,7 @@
             }
         ],
         "mainCity": "Praha",
+        "capital": "Praha",
         "image": "images/states/ceska_republika.svg"
     }
 }
