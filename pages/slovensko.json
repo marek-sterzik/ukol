@@ -1,0 +1,33 @@
+{
+    "template": "state.html.twig",
+    "vars": {
+        "name": "Slovensko",
+        "area": 49036,
+        "citizens": 5449270,
+        "neighbors": [
+            {
+                "name": "Polsko",
+                "link": null
+            },
+            {
+                "name": "Ukrajina",
+                "link": null
+            },
+            {
+                "name": "Maďarsko",
+                "link": null
+            },
+            {
+                "name": "Rakousko",
+                "link": "/rakousko"
+            },
+            {
+                "name": "Česká republika",
+                "link": "/ceska_republika"
+            }
+        ],
+        "mainCity": "Bratislava",
+        "image": "images/states/slovensko.svg"
+    }
+}
+
