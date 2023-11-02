@@ -21,3 +21,4 @@
   - Správně implementovaná dědičnost šablon.
   - Provedení html a css designu.
   - Oddělenost html a css. (css soubor je samostatně na správném místě)
+  - Včasné odevzdání a odevzdání ve správné struktuře.
