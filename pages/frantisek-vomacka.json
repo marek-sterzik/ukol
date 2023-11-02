@@ -1,0 +1,16 @@
+{
+    "template": "person.html.twig",
+    "vars": {
+        "name": "František Vomáčka",
+        "address": {
+            "street": "Úzká 3",
+            "town": "Nouzov",
+            "zip": "123 45"
+        },
+        "orders": [
+            {"item": "Dřevorubecká sekya", "price": 1750},
+            {"item": "Řeznická sekyra", "price": 1250}
+        ]
+    }
+}
+

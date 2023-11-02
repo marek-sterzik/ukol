@@ -1,0 +1,20 @@
+{
+    "template": "legal.html.twig",
+    "vars": {
+        "name": "Žabák s.r.o",
+        "address": {
+            "street": "Zelená alej 42",
+            "town": "Zeleneč",
+            "zip": "250 91"
+        },
+        "contactPerson": {
+            "name": "František Vomáčka",
+            "link": "/frantisek-vomacka"
+        },
+        "orders": [
+            {"item": "Hmyz, balený, 10kg", "price": 342},
+            {"item": "Ochranná síť proti čápům", "price": 472}
+        ]
+    }
+    }
+
