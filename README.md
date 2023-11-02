@@ -11,4 +11,13 @@
   - Všechny údaje, které jsou nyní k dispozici v testovacích datech, šablona v nějaké formě zobrazuje. Šablona právnické osoby umožňuje proklik na příslušnou fyzickou osobu.
   - HTML design je řešen jedním samostatným css souborem umístěným v adresáři public, který je nalinkován do stránky (pomocí `{{ asset(soubor) }}`).
 * Až budete mít šablony vytvořené, odevzdejte je tímto způsobem:
-  - Zavoláním příkazu `bin/pack-result` se sám vytvoří archiv se správnou strukturou jménem `package.tar.gz`
+  - Zavolejte příkaz `bin/pack-result`
+  - Příkaz se zeptá na vaše jméno, to vyplňte.
+  - Příkaz vytvoří archiv `package-<vaše_jméno>.tar.gz` se všemi soubory nutnými k odezvdání.
+  - Ten odevzdejte do aplikace Teams.
+* Hodnotí se:
+  - Funkčnost celého řešení
+  - Správné používání systému twig.
+  - Správně implementovaná dědičnost šablon.
+  - Provedení html a css designu.
+  - Oddělenost html a css. (css soubor je samostatně na správném místě)
