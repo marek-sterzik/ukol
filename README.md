@@ -1,4 +1,4 @@
-# Známkovaná samostatná práce z předmětu PVA pro I4
+# Známkovaná samostatná práce z předmětu PVA pro I3
 
 Úkolem je vytvořit šablony pro detaily osob (fyzických a právnických) v rámci administračního rozhraní hypotetického eshopu.
 
