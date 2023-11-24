@@ -1,0 +1,22 @@
+{
+    "template": "notable-person.html.twig",
+    "vars": {
+        "name": "Jan Žižka",
+        "description": "Jan Žižka z Trocnova a Kalicha (kolem roku 1360 Trocnov – 11. října 1424 u hradu Přibyslavi, tradičně Šenfeld) byl český husitský vojevůdce, pokládaný za otce husitské vojenské doktríny, a autora či prvního uživatele defenzivní bojové techniky, tzv. vozové hradby. Historicky je podrobněji zmapováno pouze šest posledních let jeho života, zprávy o Žižkových předchozích osudech jsou nedostatečné, vycházet lze pouze z kusých zmínek v několika náhodou zachovalých listinách. Proto se ani odborníci nemohou shodnout, a v biografických pracích, věnovaných táborskému hejtmanovi, zastávají často i vzájemně protichůdné názory.",
+        "dates": {
+            "born": "~1360",
+            "died": "11. 10. 1424"
+        },
+        "image": "img/jan-zizka.jpg",
+        "knownFor": [
+            "Husitská revoluce",
+            "Vojevůdce"
+        ],
+
+        "contemporaries": [
+            {"name": "Václav IV", "link": "/vaclav-iv"},
+            {"name": "Jan Hus", "link": "/jan-hus"}
+        ]
+    }
+}
+

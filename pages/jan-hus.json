@@ -1,0 +1,21 @@
+{
+    "template": "notable-person.html.twig",
+    "vars": {
+        "name": "Jan Hus",
+        "description": "Jan Hus (kolem roku 1370 pravděpodobně Husinec – 6. července 1415 Kostnice) byl římskokatolický kněz, český středověký náboženský myslitel, vysokoškolský pedagog, reformátor a kazatel. Hus byl, po Johnu Wycliffovi, jehož myšlenkami a argumentací byl inspirován, jedním z prvních reformátorů církve, který téměř o jedno století předběhl své následníky – reformátory Luthera, Bezu, Kalvína a Zwingliho.",
+        "dates": {
+            "born": "~1370",
+            "died": "6. 7. 1415"
+        },
+        "image": "img/jan-hus.jpg",
+        "knownFor": [
+            "Reformátor",
+            "Rektor Karlovy Univerzity"
+        ],
+        "contemporaries": [
+            {"name": "Václav IV", "link": "/vaclav-iv"},
+            {"name": "Jan Žižka", "link": "/jan-zizka"}
+        ]
+    }
+}
+

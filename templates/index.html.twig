@@ -3,9 +3,9 @@
     <body>
         <h1>Jednoduchý rozcestník</h1>
         <ul>
-            <li><a href="/frantisek-vomacka">František Vomáčka</a></li>
-            <li><a href="/josef-voprsalek">Josef Vopršálek</a></li>
-            <li><a href="/zabak-sro">Žabák s.r.o.</a></li>
+            {% for link in links %}
+                <li><a href="{{ link.link }}">{{ link.name }}</a></li>
+            {% endfor %}
         </ul>
     </body>
 </html>

@@ -1,3 +1,12 @@
 {
-    "template": "index.html.twig"
+    "template": "index.html.twig",
+    "vars": [
+        "links": [
+            {"name": "Karel IV", "link": "/karel-iv"},
+            {"name": "Václav IV", "link": "/vaclav-iv"},
+            {"name": "Jan Žižka", "link": "/jan-zizka"},
+            {"name": "Jan Hus", "link": "/jan-hus"}
+        ]
+
+    ]
 }

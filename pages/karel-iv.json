@@ -1,0 +1,18 @@
+{
+    "template": "monarch.html.twig",
+    "vars": {
+        "name": "Karel IV",
+        "description": "Karel IV. (14. května 1316, Praha – 29. listopadu 1378, tamtéž), narozen jako Václav, byl jedenáctý český král vládnoucí jako Karel I. od srpna 1346 až do své smrti v listopadu 1378. Karel IV. byl římsko-německý král od července 1346 a od roku 1355 císař římský. Byl také italský (lombardský) král od roku 1355, burgundský (arelatský) král od roku 1365, moravský markrabě v letech 1333 až 1349 a lucemburský hrabě v období let 1346 až 1353. Pocházel po otci z dynastie Lucemburků a po matce byl potomkem rodu Přemyslovců.",
+        "dates": {
+            "born": "14. 5. 1316",
+            "died": "29. 11. 1378"
+        },
+        "reigned": "České země",
+        "image": "img/karel-iv.jpg",
+
+        "contemporaries": [
+            {"name": "Václav IV", "link": "/vaclav-iv"}
+        ]
+    }
+}
+

@@ -1,0 +1,20 @@
+{
+    "template": "monarch.html.twig",
+    "vars": {
+        "name": "Václav IV",
+        "description": "Václav IV. (26. února 1361 Norimberk – 16. srpna 1419 Nový hrad u Kunratic) z rodu Lucemburků byl český král (1378–1419) a římský král (1376–1400). Jeho otcem byl císař Karel IV. a jeho matkou Anna Svídnická. Na český trůn nastoupil jako sedmnáctiletý a vládl 41 let, do té doby nejdéle ze všech českých králů. Za jeho vlády se v Čechách rozvinulo hnutí české reformace, jehož spory s katolíky vyústily po smrti Václava v husitské války.",
+        "dates": {
+            "born": "26. 2. 1361",
+            "died": "16. 8. 1419"
+        },
+        "reigned": "České země",
+        "image": "img/vaclav-iv.jpg",
+
+        "contemporaries": [
+            {"name": "Karel IV", "link": "/karel-iv"},
+            {"name": "Jan Hus", "link": "/jan-hus"},
+            {"name": "Jan Žižka", "link": "/jan-zizka"}
+        ]
+    }
+}
+
