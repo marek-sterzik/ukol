@@ -1,0 +1,13 @@
+{
+    "template": "text-joke.html.twig",
+    "vars": {
+        "caption": "Hélium",
+        "text": "Přijde hélium do baru. Barman mu povídá: \"intertním plynům nenalévám\". Hélium nereaguje.",
+        "next": "/joke2",
+        "prev": null,
+        "comments": [
+            {"name": "Jarda Novák", "text": "Hahaha"},
+            {"name": "František Vomáčka", "text": "ROFL"}
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "template": "image-joke.html.twig",
+    "vars": {
+        "caption": "Skupina odborníků",
+        "image": "joke2.jpg",
+        "next": "/joke3",
+        "prev": "/joke2",
+        "comments": [
+            {"name": "Jarda Novák", "text": "Klasika"},
+            {"name": "Dan Zmatlík", "text": "no jo no, docela dobrý."},
+            {"name": "Jana Nová", "text": "není co dodat"}
+        ]
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "template": "text-joke.html.twig",
+    "vars": {
+        "caption": "10 skupin",
+        "text": "Lidé se dělí na 10 skupin. Na ty co rozumí binárnímu kódu a na ty ostatní.",
+        "next": null,
+        "prev": "/joke2",
+        "comments": [
+            {"name": "Ondřej Nevrlý", "text": "Vůbec to nechápu. Co to je za blbost?"},
+            {"name": "František Vomáčka", "text": "Chvíli mi to trvalo, ale pak jsem to pochopil. Hahaha."}
+        ]
+    }
+}
