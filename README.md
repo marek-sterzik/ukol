@@ -29,3 +29,4 @@ Vytvořte symfony controller, který:
   - stránka by měla zároveň obsahovat aspoň jednoduchý css styl (grafický design css stylu nebude hodnocen, ale mělo by být patrné, že styl se používá
     a styl by měl být proveden technicky správně).
   - pokud identifikátor tabulky není předán, stránka by měla jako default využít identifikátor `default`.
+
