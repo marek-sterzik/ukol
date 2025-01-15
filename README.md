@@ -30,3 +30,7 @@ Vytvořte symfony controller, který:
     a styl by měl být proveden technicky správně).
   - pokud identifikátor tabulky není předán, stránka by měla jako default využít identifikátor `default`.
 
+Až práci dokončíte, příkazem `bin/pack` celý balíček zabalte a výsledek pošlete do aplikace teams.
+
+Celá symfony aplikace stojí na prostředí [spsostrov-php-runtime](https://github.com/marek-sterzik/spsostrov-php-runtime). Je povoleno z tohoto repozitáře
+kopírovat různé části. Jiné části kódu se kopírovat nesmí.
