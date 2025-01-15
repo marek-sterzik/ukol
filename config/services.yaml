@@ -33,3 +33,6 @@ services:
         arguments:
             $assetBaseDir: '%kernel.project_dir%/public'
             $versionLinkWildCard: 'assets-v*'
+    App\TableGenerator\TableGenerator:
+        arguments:
+            $dataFile: '%kernel.project_dir%/table.dat'
