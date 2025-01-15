@@ -1,132 +1,31 @@
-# SPŠ Ostrov PHP runtime environment
+# Samostatná práce - Symfony controllery
 
-Toto je vývojové prostředí pro vývoj PHP aplikací v předmětu PVA.
+Vytvořte symfony controller a šablonu, která bude zobrazovat tabulku, jejíž data dodá služba `App\TableGenerator\TableGenerator`.
 
-## Závislosti a instalace
-
-### Linux
-
-Pro provozování operačního systému založeném na Linuxu je potřeba udělat dvě věci:
-
-1. Nainstalovat balíček `docker` (u starších instalací také balíček `docker-compose` který je u novějších instalací už součástí balíčku `docker`).
-2. Přidat uživatele, který bude docker používat do skupiny `docker`.
-
-Na nejnovějších systémech Ubuntu by mělo být například možné nakonfigurovat nutné závislosti pomocí těchto dvou příkazu:
-```
-sudo apt install docker
-sudo usermod -a -G docker <uživatelské-jméno>
-```
-
-Přidání do skupiny se nicméně může projevit až po restartu (nejméně terminálu, někdy ale snad i celého systému, což je na Linux dost ostudné).
-Zda už se přidání do skupiny projevilo, lze zkontrolovat zavoláním příkazu `groups`.
-
-### Windows
-
-Instalaci ve Windows je věnována [samostatná stránka](README.windows.md).
-
-## Rychlý start
-
-Pro rychlý start systému, spusťte tuto sekvenci příkazů:
+Služba `TableGenerator` má jednu metodu
 
 ```
-bin/docker configure
-bin/docker up
-bin/docker initialize
+public function getTableData(string $tableIdentifier): ?array
 ```
 
-**Aplikaci přitom vždy ze zásady spouštíme jako obyčejný uživatel, nikdy jako root!**
+kde `$tableIdentifier` je identifikátor tabulky, která se má zobrazit a návratová hodnota je asocitivní pole obsahující všechny údaje
+k tabulce (deskriptor tabulky). V případě, že tabulka daného identifikátoru neexistuje, metoda vrací `null`.
 
-Aplikace se potom rozběhne na portu, který jste zadali v konfigurační části. Pokud jste ponechali základní port 80, budete mít aplikaci
-k dispozici na adrese:
+Deskriptor tabulky jakožto asociativní pole obsahuje tyto klíče:
+  - `caption` (string) - nadpis tabulky
+  - `header` (pole stringů) - nadpisy všech sloupců v pořadí, v jakém mají být zobrazeny (měly by být v `<th>` elementech)
+  - `data` (pole polí stringů) - vlastní data tabulky - jedná se o pole jednotlivých řádků, přičemž každý řádek je pole správně seřazených buněk
+    (pořadí buněk přesně odpovídá pořadí, v jakém jsou sloupce uvedeny v klíči `header`)
 
-```
-http://localhost
-```
-
-Pokud jste zadali jiné číslo portu, bude aplikace dostupná na adrese:
-
-```
-http://localhost:<port>
-```
-
-## Konfigurace prostředí
-
-Prostředí se konfiguruje příkazem
-
-```
-bin/docker configure
-```
-
-Po spuštění příkazu budete dotázáni na různé otázky.  V základním prostředí se nastavuje pouze číslo portu, na kterém bude webová aplikace poslouchat.
-
-Prostředí stačí nakonfigurovat jednou před prvním spuštěním. V případě, nutnosti prostředí rekonfigurovat, je potřeba následně restartovat docker kontejnery pomocí dvojice příkazů `bin/docker restart`.
-
-## Spuštění a vypnutí kontejnerů
-
-Kontejnery spustíte příkazem:
-```
-bin/docker up
-```
-A zastavíte je příkazem:
-```
-bin/docker down
-```
-Popřípadě je můžete "odstřelit" příkazem:
-```
-bin/docker kill
-```
-
-Chcete-li kontejnery restartovat (tj. vypnout a zapnout), můžete použít příkaz:
-```
-bin/docker restart
-```
-
-Běh kontejnerů je nutný, aby celá webová aplikace fungovala. Kontejnery obsahují veškerý software jako php procesor, popřípadě webový server.
-
-## Inicializace aplikace
-
-Aplikaci inicializujete příkazem:
-```
-bin/docker initialize
-```
-Význam tohoto kroku je připravit aplikaci k běhu systému. Systém je vytvořen tak, aby se do systému daly snadno přidávat nové inicializační kroky.
-
-Inicializaci je potřeba také provést pouze jednou, ale v případě některých změn může být potřeba aplikaci reinicializovat. Zejména jde například o změnu závislostí v souboru `composer.json`.
-
-## Další užitečné příkazy
-
-Chcete-li spustit `docker-compose` v rámci prostředí aplikace, spusťte příkaz:
-
-```
-bin/docker compose
-```
-(tento příkaz je vhodný pouze pro pokročilé využití)
-
-Pokud chcete spustit nějaký příkaz v rámci daného docker kontejneru, můžete jej spustit příkazem:
-
-```
-bin/docker exec <kontejner> <příkaz> <argumenty>
-```
-Opět, tento příkaz je určen pouze pro pokročilé uživatele. V základním prostředí je definován jediný kontejner se jménem `webserver`, který obsahuje webserver a prostředí pro běh php.
-
-## Adresáře a soubory
-
-Celé prosředí obsahuje tyto adresáře:
-
-* `bin` - místo pro skripty, které ovlivňují vývojové prostředí. V základní variantě obsahuje adresář pouze skript `docker`. Lze ale přidávat další příkazy pro různé účely.
-* `docker` - obsahuje definice docker kontejnerů. Jen pro pokročilé uživatelé.
-* `lib` - obsahuje pomocné soubory, které nejsou určeny k editaci.
-* `public` - obsahuje soubory, které jsou přímo viditelné přes webový server (statické soubory)
-* `scripts` - obsahuje skripty, které se používají ke konfiguraci a inicializaci prostředí. (do obou skriptů je možné přidávat další funkce)
-* `src` - obsahuje zdrojový kód celé aplikace
-* `templates` - může obsahovat různé šablony pro vytváření obsahu (v základní verzi prostředí není význam nijak definován)
-* `vendor` - o tento adresář se stará composer a nemělo by se do něj zasahovat ručně, pouze voláním composeru.
-
-Dále pak obsahuje tyto soubory:
-
-* `.config.env` - obsahuje konfiguraci celého prostředí, která byla vytvořena příkazem `bin/docker configure`. Soubor není přítomen, dokud se prostředí nezkonfiguruje.
-* `.gitignore` - soubor říkající systému `git`, které soubory a adresáře se nemají ukládat do repozitáře.
-* `README.md` - tento soubor s nápovědou
-* `composer.json` - konfigurační soubor pro composer.
-* `composer.lock` - pomocný stavový soubor pro composer (není určen pro přímou editaci)
-* `docker-compose.yml` - konfigurační soubor pro docker-compose - definuje kontejnery, které v rámci systému poběží.
+Vytvořte symfony controller, který:
+  - vezme identifikátor tabulky předaný jako parametr (lze použít buď get parametr stylem `$request->query->get('id')` nebo jako route parametr)
+    a zobrazí tabulku ukrytou pod daným identifikátorem jako html stránku.
+  - stránka musí být ošetřena proti tomu, aby správně vyhodnotila, že tabulka daného identifikátoru neexistuje. V takovém případě by html stránka
+    měla obsahovat jednoduchou chybovou hlášku informující uživatele, že stránka neexistuje.
+  - Všechna data tabulky musejí být zobrazena na html stránce:
+    - `caption` ideálně jako `h1` element
+    - `header` jako řádek tabulky s `th` elementy
+    - `data` jako vícero řádků s `td` elementy
+  - stránka by měla zároveň obsahovat aspoň jednoduchý css styl (grafický design css stylu nebude hodnocen, ale mělo by být patrné, že styl se používá
+    a styl by měl být proveden technicky správně).
+  - pokud identifikátor tabulky není předán, stránka by měla jako default využít identifikátor `default`.
