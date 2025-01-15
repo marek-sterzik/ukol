@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd "$(dirname "$(which "$0")")/.."
+
+if [ -e "table.dat.yaml" ]; then
+    base64 table.dat.yaml > table.dat
+fi
