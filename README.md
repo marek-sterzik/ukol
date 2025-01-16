@@ -18,19 +18,21 @@ Deskriptor tabulky jakožto asociativní pole obsahuje tyto klíče:
     (pořadí buněk přesně odpovídá pořadí, v jakém jsou sloupce uvedeny v klíči `header`)
 
 Vytvořte symfony controller, který:
-  - vezme identifikátor tabulky předaný jako parametr (lze použít buď get parametr stylem `$request->query->get('id')` nebo jako route parametr)
+  - zpracovává cestu `/display-table`
+  - vezme identifikátor tabulky předaný jako get parametr `table` (`$request->query->get('table')`)
     a zobrazí tabulku ukrytou pod daným identifikátorem jako html stránku.
   - stránka musí být ošetřena proti tomu, aby správně vyhodnotila, že tabulka daného identifikátoru neexistuje. V takovém případě by html stránka
-    měla obsahovat jednoduchou chybovou hlášku informující uživatele, že stránka neexistuje.
+    měla obsahovat jednoduchou chybovou hlášku informující uživatele, že požadovaná tabulka neexistuje.
   - Všechna data tabulky musejí být zobrazena na html stránce:
     - `caption` ideálně jako `h1` element
-    - `header` jako řádek tabulky s `th` elementy
+    - `header` jako první řádek tabulky s `th` elementy
     - `data` jako vícero řádků s `td` elementy
   - stránka by měla zároveň obsahovat aspoň jednoduchý css styl (grafický design css stylu nebude hodnocen, ale mělo by být patrné, že styl se používá
     a styl by měl být proveden technicky správně).
   - pokud identifikátor tabulky není předán, stránka by měla jako default využít identifikátor `default`.
 
-Až práci dokončíte, příkazem `bin/pack` celý balíček zabalte a výsledek pošlete do aplikace teams.
+Až práci dokončíte, příkazem `bin/pack` celý balíček zabalte a výsledek odevzdejte přes aplikaci teams.
 
 Celá symfony aplikace stojí na prostředí [spsostrov-php-runtime](https://github.com/marek-sterzik/spsostrov-php-runtime). Je povoleno z tohoto repozitáře
-kopírovat různé části. Jiné části kódu se kopírovat nesmí.
+kopírovat různé části. Jiné části kódu se kopírovat nesmí. Při práci můžete používat veškerou dokumentaci, je však zakázáno kopírovat kód (mimo kódu z
+repozitáře spsostrov-php-runtime).
