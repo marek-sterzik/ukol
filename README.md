@@ -30,6 +30,8 @@ Vytvořte symfony controller, který:
   - stránka by měla zároveň obsahovat aspoň jednoduchý css styl (grafický design css stylu nebude hodnocen, ale mělo by být patrné, že styl se používá
     a styl by měl být proveden technicky správně).
   - pokud identifikátor tabulky není předán, stránka by měla jako default využít identifikátor `default`.
+  - **BONUS**: Vytvořte druhý symfony controller zpracovávající cestu `/`, na kterém bude jednoduchý formulář s textovým polem, do kterého lze zadat
+    identifikátor tabulky a po odeslání formuláře bude příslušná tabulka zobrazena.
 
 Až práci dokončíte, příkazem `bin/pack` celý balíček zabalte a výsledek odevzdejte přes aplikaci teams.
 
