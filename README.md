@@ -1,6 +1,9 @@
 # Samostatná práce - Symfony controllery
 
+**Dobře si přečtěte toto zadání!**
+
 Vytvořte symfony controller a šablonu, která bude zobrazovat tabulku, jejíž data dodá služba `App\TableGenerator\TableGenerator`.
+
 
 Služba `TableGenerator` má jednu metodu
 
