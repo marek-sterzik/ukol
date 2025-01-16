@@ -28,6 +28,14 @@ class TableGenerator
 
     public function getTableData(string $tableIdentifier): ?array
     {
+        $recursionProtection = [];
+        while (isset($this->data[$tableIdentifier]) && is_string($this->data[$tableIdentifier])) {
+            if (isset($recursionProtection[$tableIdentifier])) {
+                return null;
+            }
+            $recursionProtection[$tableIdentifier] = true;
+            $tableIdentifier = $this->data[$tableIdentifier];
+        }
         return $this->data[$tableIdentifier] ?? null;
     }
 }
