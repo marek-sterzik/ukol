@@ -16,9 +16,9 @@ k tabulce (deskriptor tabulky). V případě, že tabulka daného identifikátor
 
 Deskriptor tabulky jakožto asociativní pole obsahuje tyto klíče:
   - `caption` (string) - nadpis tabulky
-  - `header` (pole stringů) - nadpisy všech sloupců v pořadí, v jakém mají být zobrazeny (měly by být v `<th>` elementech)
+  - `heading` (pole stringů) - nadpisy všech sloupců v pořadí, v jakém mají být zobrazeny (měly by být v `<th>` elementech)
   - `data` (pole polí stringů) - vlastní data tabulky - jedná se o pole jednotlivých řádků, přičemž každý řádek je pole správně seřazených buněk
-    (pořadí buněk přesně odpovídá pořadí, v jakém jsou sloupce uvedeny v klíči `header`)
+    (pořadí buněk přesně odpovídá pořadí, v jakém jsou sloupce uvedeny v klíči `heading`)
 
 Vytvořte symfony controller, který:
   - zpracovává cestu `/display-table`
@@ -28,7 +28,7 @@ Vytvořte symfony controller, který:
     měla obsahovat jednoduchou chybovou hlášku informující uživatele, že požadovaná tabulka neexistuje.
   - Všechna data tabulky musejí být zobrazena na html stránce:
     - `caption` ideálně jako `h1` element
-    - `header` jako první řádek tabulky s `th` elementy
+    - `heading` jako první řádek tabulky s `th` elementy
     - `data` jako vícero řádků s `td` elementy
   - stránka by měla zároveň obsahovat aspoň jednoduchý css styl (grafický design css stylu nebude hodnocen, ale mělo by být patrné, že styl se používá
     a styl by měl být proveden technicky správně).
